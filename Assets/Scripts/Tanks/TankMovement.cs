@@ -12,6 +12,7 @@ public class TankMovement : MonoBehaviour
     private void Update()
     {
         PlayerMove(m_horizontal);
+        UpdateLookJoystick();
     }
     private void PlayerMove(float m_horizontal)
     {
@@ -20,6 +21,15 @@ public class TankMovement : MonoBehaviour
         Vector2 convertedXY = ConvertWithCamera(Camera.main.transform.position, m_horizontal, m_vertical);
         Vector3 direction = new Vector3(convertedXY.x, 0, convertedXY.y).normalized;
         transform.Translate(direction * tankData.tankSpeed, Space.World);
+    }
+    void UpdateLookJoystick()
+    {
+        float hoz = m_turrentJoystick.Horizontal;
+        float ver = m_turrentJoystick.Vertical;
+        Vector2 convertedXY = ConvertWithCamera(Camera.main.transform.position, hoz, ver);
+        Vector3 direction = new Vector3(convertedXY.x, 0, convertedXY.y).normalized;
+        Vector3 lookAtPosition = transform.position + direction;
+        transform.LookAt(lookAtPosition);
     }
 
     private Vector2 ConvertWithCamera(Vector3 cameraPos, float hor, float ver)
