@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: RedTank
   m_EditorClassIdentifier: 
   tankType: 1
-  m_tankName: Zappy
-  m_tankSpeed: 0.2
-  m_tankHealth: 50
-  m_tankDamage: 20
+  tankName: 
+  tankSpeed: 0.4
+  tankHealth: 50
+  tankDamage: 20

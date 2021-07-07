@@ -8,6 +8,6 @@ public class TankScriptableData : ScriptableObject
     public TankType tankType;
     public string tankName;
     public float tankSpeed;
-    public float tankHealth;
-    public float tankDamage;
+    public int tankHealth;
+    public int tankDamage;
 }

@@ -1,33 +1,35 @@
-﻿using UnityEngine;
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
 
-public class EnemyHeath : MonoBehaviour
+public class PlayerHealth : MonoBehaviour
 {
     public GameObject ExplodeEffect;
-    public EnemySribtableObject enemyData;
-    public HealthBar healthBar;
+    public TankScriptableData TankData;
+    public PlayerHealthBar healthBar;
     private int maxHealth;
     private int currentHealth;
+    public Bullet bullet;
 
     private void Start()
     {
-        maxHealth = enemyData.enemyHealth;
+        maxHealth = TankData.tankHealth;
         currentHealth = maxHealth;
-        healthBar.SetMaxhealth(maxHealth);
+        healthBar.SetPlayerMaxhealth(maxHealth);
     }
 
     private void OnCollisionEnter(Collision collision)
     {
-        if(collision.gameObject.tag == "Playerbullet")
+        if (collision.gameObject.tag == "Enemybullet")
         {
             TakeDamage(10);
         }
-        
     }
 
     private void TakeDamage(int damage)
     {
         currentHealth -= damage;
-        healthBar.SetHealth(currentHealth);
+        healthBar.SetPlayerHealth(currentHealth);
         if (currentHealth <= 0)
         {
             TankExplode();
