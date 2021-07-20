@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: BlueTank
   m_EditorClassIdentifier: 
   tankType: 3
-  m_tankName: Sniper
-  m_tankSpeed: 0.08
-  m_tankHealth: 75
-  m_tankDamage: 50
+  tankName: 
+  tankSpeed: 0.3
+  tankHealth: 80
+  tankDamage: 20
