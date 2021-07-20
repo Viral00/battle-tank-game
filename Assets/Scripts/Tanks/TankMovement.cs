@@ -24,7 +24,7 @@ public class TankMovement : MonoBehaviour
         m_vertical = m_movejoystick.Vertical;
         Vector2 convertedXY = ConvertWithCamera(Camera.main.transform.position, m_horizontal, m_vertical);
         Vector3 direction = new Vector3(convertedXY.x, 0, convertedXY.y).normalized;
-        transform.Translate(direction * 0.2f, Space.World);
+        transform.Translate(direction * 0.1f, Space.World);
 
     }
     void UpdateLookJoystick()

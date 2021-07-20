@@ -765,12 +765,12 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 256
   walkPoint: {x: 0, y: 0, z: 0}
-  walkPointRange: 5
-  timeBetweenAttacks: 0.5
+  walkPointRange: 6.01
+  timeBetweenAttacks: 0.9
   projectile: {fileID: 7180752789678809637, guid: ec7c2037b6c04b3488b7e463c9603a55,
     type: 3}
-  sightRange: 20
-  attackRange: 12
+  sightRange: 16
+  attackRange: 9.99
   playerInSightRange: 0
   playerInAttackRange: 0
 --- !u!65 &9000477202818535822
@@ -831,7 +831,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9000477202818535824}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: bc72b952516c6654d8f3c69c30b1a19f, type: 3}
   m_Name: 
